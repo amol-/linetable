@@ -7,18 +7,18 @@ try:
 except IOError:
     README = ""
 
-version = "0.0.1"
+version = "0.0.2"
 
 setup(
     name="linetable",
     version=version,
-    description="library to manage Python Locations Table",
+    description="library to manage Python Locations Table (co_linetable)",
     long_description=README,
     classifiers=[],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     keywords="",
     author="Alessandro Molina",
     author_email="amol@turbogears.org",
-    url="",
+    url="https://github.com/amol-/linetable",
     license="MIT",
     packages=find_packages(exclude=["ez_setup", "examples", "tests"]),
     include_package_data=True,
