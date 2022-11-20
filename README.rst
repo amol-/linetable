@@ -1,6 +1,21 @@
 About linetable
 ---------------
 
+.. image:: https://github.com/amol-/linetable/actions/workflows/run-tests.yml/badge.svg
+    :target: https://github.com/amol-/linetable/actions/workflows/run-tests.yml
+
+.. image:: https://coveralls.io/repos/amol-/linetable/badge.svg
+    :target: https://coveralls.io/r/amol-/linetable
+
+.. image:: https://img.shields.io/pypi/v/linetable.svg
+   :target: https://pypi.python.org/pypi/linetable
+
+.. image:: https://img.shields.io/pypi/pyversions/linetable.svg
+    :target: https://pypi.python.org/pypi/linetable
+
+.. image:: https://img.shields.io/pypi/l/linetable.svg
+    :target: https://pypi.python.org/pypi/linetable
+
 linetable is a library parse and generate co_linetable attributes in Python code objects.
 
 Based on https://github.com/python/cpython/blob/main/Objects/locations.md
