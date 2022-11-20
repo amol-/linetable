@@ -14,7 +14,11 @@ setup(
     version=version,
     description="library to manage Python Locations Table (co_linetable)",
     long_description=README,
-    classifiers=[],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[
+        'Intended Audience :: Developers',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3.11',
+    ],
     keywords="",
     author="Alessandro Molina",
     author_email="amol@turbogears.org",
