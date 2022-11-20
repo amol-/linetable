@@ -27,8 +27,14 @@ def _generate_linetable(pairs, firstlineno, use_bytecode_offset):
             # but we have the byte code offsets from dis.findlinestarts()
             length = _linetable_length(length, next_entry)
 
-        line_delta = start_line - cur_line
-        if start_col is None:
+        if start_line is not None:
+            line_delta = start_line - cur_line
+            cur_line = end_line
+
+        if start_line is None:
+            code = 15
+            yield _new_linetable_entry(code, length).to_bytes(1)
+        elif start_col is None:
             code = 13
             yield _new_linetable_entry(code, length).to_bytes(1)
             for b in generate_signed_varint(line_delta):
@@ -48,7 +54,6 @@ def _generate_linetable(pairs, firstlineno, use_bytecode_offset):
             raise NotImplementedError()
 
         cur_entry = next_entry
-        cur_line = end_line
 
 
 def _new_linetable_entry(code, length):
