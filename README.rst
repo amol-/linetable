@@ -3,6 +3,8 @@ About linetable
 
 linetable is a library parse and generate co_linetable attributes in Python code objects.
 
+Based on https://github.com/python/cpython/blob/main/Objects/locations.md
+
 Installing
 ----------
 
