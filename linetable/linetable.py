@@ -33,23 +33,23 @@ def _generate_linetable(pairs, firstlineno, use_bytecode_offset):
 
         if start_line is None:
             code = 15
-            yield _new_linetable_entry(code, length).to_bytes(1)
+            yield _new_linetable_entry(code, length).to_bytes(1, byteorder="little")
         elif start_col is None:
             code = 13
-            yield _new_linetable_entry(code, length).to_bytes(1)
+            yield _new_linetable_entry(code, length).to_bytes(1, byteorder="little")
             for b in generate_signed_varint(line_delta):
-                yield b.to_bytes(1)
+                yield b.to_bytes(1, byteorder="little")
         elif line_delta == 0 and (end_col - start_col) < 15:
             # short form, same line as before and near columns.
             code = start_col // 8
-            yield _new_linetable_entry(code, length).to_bytes(1)
-            yield (((start_col % 8) << 4) | (end_col - start_col)).to_bytes(1)
+            yield _new_linetable_entry(code, length).to_bytes(1, byteorder="little")
+            yield (((start_col % 8) << 4) | (end_col - start_col)).to_bytes(1, byteorder="little")
         elif line_delta <= 2 and start_col <= 255 and end_col <= 255:
             # New line form
             code = 10 + line_delta
-            yield _new_linetable_entry(code, length).to_bytes(1)
-            yield start_col.to_bytes(1)
-            yield end_col.to_bytes(1)
+            yield _new_linetable_entry(code, length).to_bytes(1, byteorder="little")
+            yield start_col.to_bytes(1, byteorder="little")
+            yield end_col.to_bytes(1, byteorder="little")
         else:
             raise NotImplementedError()
 
