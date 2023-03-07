@@ -1,3 +1,5 @@
+import sys
+
 from linetable import generate_linetable, parse_linetable
 
 
@@ -88,6 +90,8 @@ def test_linetable_offsets_short():
     assert generate_linetable(pairs, use_bytecode_offset=True) == expected
 
 
+@pytest.mark.skipif(sys.version_info < (3,11),
+                    reason="requires python3.11+")
 def test_roundtrip():
     def _test_function():
         x = 13
