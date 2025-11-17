@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linetable"
+version = "0.0.3"
+description = "library to manage Python Locations Table (co_linetable)"
+readme = {file = "README.rst", "content-type" = "text/x-rst"}
+authors = [
+    {name = "Alessandro Molina", email = "amol@turbogears.org"},
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+keywords = ["linetable", "python", "bytecode"]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/amol-/linetable"
+Source = "https://github.com/amol-/linetable"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["linetable", "linetable.*"]
