@@ -8,7 +8,7 @@ version = "0.0.3"
 description = "library to manage Python Locations Table (co_linetable)"
 readme = {file = "README.rst", "content-type" = "text/x-rst"}
 authors = [
-    {name = "Alessandro Molina", email = "amol@turbogears.org"},
+    {name = "Alessandro Molina", email = "alessandro@molina.fyi"},
 ]
 license = {file = "LICENSE"}
 classifiers = [
