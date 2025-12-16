@@ -26,6 +26,8 @@ jobs:
       - name: Build wheel
         run: python -m build --wheel
       - name: Install built wheel
+        # Use bash to ensure glob expansion works on Windows runners
+        shell: bash
         run: pip install dist/*.whl
       - name: Run Tests
         run: |
