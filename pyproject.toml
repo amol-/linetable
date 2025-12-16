@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=75", "wheel"]
+requires = ["setuptools>=66", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -10,7 +10,7 @@ readme = {file = "README.rst", "content-type" = "text/x-rst"}
 authors = [
     {name = "Alessandro Molina", email = "alessandro@molina.fyi"},
 ]
-license = "MIT"
+license = {"text": "MIT"}
 license-files = ["LICENSE"]
 classifiers = [
     "Intended Audience :: Developers",
