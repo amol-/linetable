@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "linetable"
-version = "0.0.3"
+version = "0.0.4"
 description = "library to manage Python Locations Table (co_linetable)"
 readme = {file = "README.rst", "content-type" = "text/x-rst"}
 authors = [
