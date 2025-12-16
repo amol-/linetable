@@ -10,7 +10,7 @@ readme = {file = "README.rst", "content-type" = "text/x-rst"}
 authors = [
     {name = "Alessandro Molina", email = "alessandro@molina.fyi"},
 ]
-license = {text = "MIT"}
+license = "MIT"
 license-files = ["LICENSE"]
 classifiers = [
     "Intended Audience :: Developers",
